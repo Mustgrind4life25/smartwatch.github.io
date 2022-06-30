@@ -1,0 +1,177 @@
+*********************************************************************
+!!!!!!!!!!!!!!!YOU CAN DO THIS BREAK THE CURSE!!!!!!!!!!!!!!!!!!!!!!!
+*********************************************************************
+
+Building a email template
+
+- each html email is made up of multiple tables
+- you have the main table that holds all the content 
+- next you have a table inside of the main table which with is 600px 
+- inside of the 600px table there are tr and td tag
+- to create multiple columns you need to create multiple tables
+- when creating columns you need to create tables
+- this all helps with the responsiveness 
+- take your time to break down these tables
+
+- don't use css resets because they make email uncentered
+
+*********************************************************************
+!!!!!!!!!!!!!!!YOU CAN DO THIS BREAK THE CURSE!!!!!!!!!!!!!!!!!!!!!!!
+*********************************************************************
+
+- always use this font family:
+	style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+
+- when creating a email your main table that holds all the content needs a width of 100%
+- next you have a tr and td tag 
+- after the td and tr tag you have a table tag that needs a width of 600 (this table will contain all content that will display)
+
+COPIED STYLES:
+- <h3 style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;color: #ffffff;padding:0;font-weight:300;text-transform: capitalize;font-size: 20px;Margin: 0;" align="center"></h3>
+
+- <p style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;color: #7f8887;font-weight:400;line-height: 1.8;font-size: 14px;padding: 0 0 30px;"></p>
+
+- <td style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;color: #333333;padding: 0 0 0 15;font-weight:600;text-transform: uppercase;font-size: 14px;" align="center">
+
+- <a style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;color: #2792ec;text-decoration: none;font-weight:600;font-size: 14px;" href="#">Learn More</a>
+
+-  <td style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;color: #333333;padding: 0 0 0 15px;font-weight:600;text-transform: uppercase;font-size: 14px;">
+     Notify
+</td>
+
+
+PADDING ORDER:
+top, right, bottom, left
+
+
+GREY SECTION ITEMS:
+- phone icon, checkmark icon, menu icon, eye icon,  gear icon, link icon
+
+
+
+<table class="icon-table" width="100%" align="left" cellspacing="0" cellpadding="0" border="0">
+                                                   <td>
+                                                      <img src="img/mobile.png" alt="" width="20">
+                                                   </td>
+                                                    <td  style="font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;color: #333333;padding: 0 0 0 15px;font-weight:600;text-transform: uppercase;font-size: 14px;">
+                                                      responsive layout
+                                                   </td>
+                                                </table>
+
+
+
+Responsive Code:
+
+- The code is broken down by it's size on different devices starting with the biggest first
+- The container is the what holds all the code inside of it 
+
+ /* desktop */
+      @media only screen and (min-width: 960px) {
+
+         .container{
+            width: 960px;
+         }
+         .header-right{
+            padding: 10px 0 15px !important;
+         }
+
+         .lets-you-row .left-column{
+            padding: 0 50px;
+         }
+
+         .one-solution-table{
+            text-align: center;
+         }
+
+         .one-solution-table img{
+            max-width: 100%;
+         }
+
+      }
+
+      /* mid-size */
+      @media only screen and (max-width: 960px){
+         .container{
+            width: 600px;
+         }
+         .header-right{
+            padding: 10px 0 60px !important;
+         }
+      }
+
+
+
+      /* mobile */
+      @media only screen and (max-width: 600px){
+         /* container section */
+         .container{
+            width: 100%;
+         }
+
+         .header-left{
+            width: 100%;
+         }
+         .header-right{
+            width: 100%;
+         }
+
+         /* lets you section */
+         .lets-you-row .left-column{
+            width: 50%;
+         }
+
+          .lets-you-row .middle-column{
+            width: 50%;
+         }
+
+
+          .lets-you-row  .right-column{
+            width: 100%;
+         }
+
+
+
+         /* Advance tables section */
+         .advance-table .left-column{
+            width: 100%;
+         }
+
+          .advance-table .right-column{
+            width: 100%;
+         }
+
+         .advance-table .left-column .left-store{
+            text-align: center;
+            width: 100%;
+         }
+
+         .advance-table .right-column .left-store{
+            text-align: center;
+            width: 100%;
+         }
+
+         /* join together section */
+
+         .join-together-table .left-column{
+            width: 100%;
+            padding: 20px 50px;
+         }
+         .join-together-table .middle-column{
+            width: 100%;
+            padding: 20px 50px;
+         }
+
+         .join-together-table .right-column{
+            width: 100%;
+            padding: 20px 50px;
+         }
+
+         /* Detail section */
+         .detail-table .one-row-table .left-column{
+            width: 100%;
+         }
+
+         .detail-table .one-row-table .right-column{
+            width: 100%;
+         }
+      }
